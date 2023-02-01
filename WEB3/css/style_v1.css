@@ -1,0 +1,402 @@
+/* Import styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Overall CSS */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS Grid and Flexbox */
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 150px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "body body"
+      "footer footer";
+  }
+  
+  .navbar_left { grid-area: navbar_left; }
+  
+  .navbar_right { grid-area: navbar_right; display: flex; flex-direction: row; justify-content: space-between;}
+  
+  .body {  display: grid;
+    grid-template-columns: 10px .1fr 1fr 1fr 1fr 1fr .1fr 10px;
+    grid-template-rows: .1fr 1fr 1fr .1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". section_1 section_1 section_1 section_1 section_1 section_1 ."
+      ". section_2 section_2 section_2 section_2 section_2 section_2 ."
+      ". section_3 section_3 section_3 section_3 section_3 section_3 ."
+      ". section_4 section_4 section_4 section_4 section_4 section_4 .";
+    grid-area: body;
+    border: blue 4px solid;
+  }
+  
+  .section_1 {  display: grid;
+    grid-template-columns: .1fr .1fr 1fr 1fr .1fr .1fr;
+    grid-template-rows: .1fr 300px 1fr 1fr 1fr .1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". section_1_left section_1_left section_1_right section_1_right ."
+      ". section_1_left section_1_left section_1_right section_1_right ."
+      ". section_1_left section_1_left section_1_right section_1_right ."
+      ". section_1_left section_1_left section_1_right section_1_right ."
+      ". . . . . .";
+    grid-area: section_1;
+    border: 4px green solid;
+  }
+  
+  .section_1_right { grid-area: section_1_right; border: yellow 0px solid; margin-left: 20px; margin-top: -20px; display: flex; flex-direction: row; justify-content: center; align-items: center;}
+
+  .section_1_right h1 {font-size: 3em;color: rgb(255,89,37); margin-bottom: -20px;}
+
+  .section_1_right h2 {font-size: 2em; color: black; margin-top: 20px; line-height: 120%;}
+  
+  .section_1_left { grid-area: section_1_left; border: yellow 0px solid; background: url(/images/welcome-image-dan-thumbs-up.png) no-repeat center; background-size: 150px; margin-left: 20px;}
+  
+  .section_2 {  display: grid;
+    border: green 0px solid;
+    grid-template-columns: .1fr .1fr 1fr 1fr .1fr .1fr;
+    grid-template-rows: 20px 50px 40px 1fr 1fr 10px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". section_2_left section_2_left section_2_right section_2_right ."
+      ". section_2_left section_2_left section_2_right section_2_right ."
+      ". section_2_hero section_2_hero section_2_hero section_2_hero ."
+      ". section_2_hero section_2_hero section_2_hero section_2_hero ."
+      ". . . . . .";
+    grid-area: section_2;
+    }
+  
+  .section_2_left { grid-area: section_2_left; border: yellow 4px solid; }
+
+  .section_2_right { grid-area: section_2_right; border: yellow 4px solid; }
+  
+  .section_2_left h2 { font-size: 2em; }
+
+  .section_2_left p { font-size: 1.1em; text-transform: uppercase; color: rgba(0, 0, 0, .8);}
+
+  .section_2_right p { font-size: 1.1em; }
+
+  #section_2_left_border { border-left: 4px solid rgb(255,89,37); padding-left: 10px; }
+  
+  .section_2_hero { grid-area: section_2_hero; border: yellow 4px solid;}
+  
+  .section_3 {  display: grid;
+    grid-template-columns: 0.5fr .1fr 1fr 1fr .1fr 0.5fr;
+    grid-template-rows: .1fr 1fr 1fr 1fr 1fr .1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". section_3_left section_3_left section_3_right section_3_right ."
+      ". section_3_left section_3_left section_3_right section_3_right ."
+      ". section_3_hero section_3_hero section_3_hero section_3_hero ."
+      ". section_3_hero section_3_hero section_3_hero section_3_hero ."
+      ". . . . . .";
+    grid-area: section_3;
+    border: yellow 4px solid;
+  }
+  
+  .section_3_left { grid-area: section_3_left; border: yellow 4px solid;}
+  
+  .section_3_right { grid-area: section_3_right; border: yellow 4px solid;}
+  
+  .section_3_hero { grid-area: section_3_hero; border: yellow 4px solid;}
+  
+  .section_4 {  display: grid;
+    grid-template-columns: 0.5fr .1fr 1fr 1fr .1fr 0.5fr;
+    grid-template-rows: .1fr 1fr 1fr 1fr 1fr .1fr;
+    gap: 5px 6px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . . ."
+      ". section_4_left section_4_left section_4_right section_4_right ."
+      ". section_4_left section_4_left section_4_right section_4_right ."
+      ". section_4_hero section_4_hero section_4_hero section_4_hero ."
+      ". section_4_hero section_4_hero section_4_hero section_4_hero ."
+      ". . . . . .";
+    grid-area: section_4;
+    border: yellow 4px solid;
+  }
+  
+  .section_4_left { grid-area: section_4_left; border: yellow 4px solid;}
+  
+  .section_4_right { grid-area: section_4_right; border: yellow 4px solid;}
+  
+  .section_4_hero { grid-area: section_4_hero; border: yellow 4px solid;}
+  
+  .footer { grid-area: footer; border: cyan 4px solid;}
+
+/* Button design for project view on homepage */
+
+.button-11 {
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-11:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .button-11:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  
+  .button-11:focus-visible {
+    box-shadow: none;
+  }
+  
+
+
+/* Responsive navigation menu - Went through tutorial here for this part shorturl.at/bdJU6 */
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 8rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.7rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Resize other elements for medium screens */
+
+@media screen and (min-width: 650px) and (max-width: 1100px) {
+
+    .body {  display: grid;
+        grid-template-columns: 80px 200px 200px 200px 200px 200px 80px;
+        grid-template-rows: .4fr 300px 1fr .1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". section_1 section_1 section_1 section_1 section_1 section_1 ."
+          ". section_2 section_2 section_2 section_2 section_2 section_2 ."
+          ". section_3 section_3 section_3 section_3 section_3 section_3 ."
+          ". section_4 section_4 section_4 section_4 section_4 section_4 .";
+        grid-area: body;
+        border: blue 4px solid;
+      }
+
+      .section_1_right h1 {font-size: 6em;color: rgb(255,89,37); margin-bottom: -20px;}
+
+      .section_1_right h2 {font-size: 3em; color: black; margin-top: 20px; line-height: 120%;}
+
+      .section_2_left { grid-area: section_2_left; border: yellow 4px solid;}
+
+      .section_2_right { grid-area: section_2_right; border: yellow 4px solid;}
+      
+      .section_2_left h2 { font-size: 3em;}
+    
+      .section_2_left p { font-size: 1.6em; text-transform: uppercase; color: rgba(0, 0, 0, .8);}
+    
+      .section_2_right p { font-size: 1.6em;}
+
+      .button-11 {
+        background-color: #FFFFFF;
+        border: 1px solid rgb(209,213,219);
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #111827;
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: .75rem 1rem;
+        margin-top: 5px;
+        text-align: center;
+        text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+}
+
+/* Resize other elements for large screens */
+
+@media screen and (min-width: 1101px) {
+    
+    .section_1_left { grid-area: section_1_left; border: yellow 0px solid; background: url(/images/welcome-image-dan-thumbs-up.png) no-repeat center; background-size: 80%; margin-left: 200px; margin-top: 20px;}
+
+    .body {  display: grid;
+        grid-template-columns: 10px .1fr 1fr 1fr 1fr 1fr .1fr 10px;
+        grid-template-rows: .4fr 1fr 1fr .1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". section_1 section_1 section_1 section_1 section_1 section_1 ."
+          ". section_2 section_2 section_2 section_2 section_2 section_2 ."
+          ". section_3 section_3 section_3 section_3 section_3 section_3 ."
+          ". section_4 section_4 section_4 section_4 section_4 section_4 .";
+        grid-area: body;
+        border: blue 4px solid;
+      }
+
+      .section_1_right h1 {font-size: 10em;color: rgb(255,89,37); margin-bottom: -20px;}
+
+      .section_1_right h2 {font-size: 5em; color: black; margin-top: 20px; line-height: 120%;}
+
+      .section_2_right { grid-area: section_2_right; border: yellow 4px solid; }
+
+      .section_2 { display: grid;
+        grid-template-columns: 1fr .1fr 1fr 1fr .1fr 1fr;
+        grid-template-rows: 20px 50px 40px .4fr 50px 20px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . . . . ."
+          ". section_2_left section_2_left section_2_right section_2_right ."
+          ". section_2_left section_2_left section_2_right section_2_right ."
+          ". section_2_hero section_2_hero section_2_hero section_2_hero ."
+          ". section_2_hero section_2_hero section_2_hero section_2_hero ."
+          ". . . . . .";
+        grid-area: section_2;
+        border: green 0px solid;
+        }
+
+      
+      .section_2_left h2 { font-size: 3em;}
+      
+      .section_2_left p { font-size: 1.6em; text-transform: uppercase; color: rgba(0, 0, 0, .8);}
+      
+      .section_2_right p { font-size: 1.6em;}
+      
+      .section_2_hero { grid-area: section_2_hero;}
+
+/* Fix hero image medium screen */
+
+@media screen and (min-width: 650px) and (max-width: 780px) {
+
+    .section_1_left { grid-area: section_1_left; border: yellow 0px solid; background: url(/images/welcome-image-dan-thumbs-up.png) no-repeat center; background-size: 150px; margin-left: 20px;}
+
+}
