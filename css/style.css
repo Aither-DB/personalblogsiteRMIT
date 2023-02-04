@@ -83,7 +83,7 @@ a {
 
   .section_1_right h2 {font-size: 2em; color: black; margin-top: 20px; line-height: 120%;}
   
-  .section_1_left { grid-area: section_1_left; background: url(../images/welcome-image-dan-thumbs-up.png) no-repeat center; background-size: 150px;}
+  .section_1_left { grid-area: section_1_left; background: url(/../images/welcome-image-dan-thumbs-up.png) no-repeat center; background-size: 150px;}
   
 /* Section 2 project case study */
 
