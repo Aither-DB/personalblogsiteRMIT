@@ -808,7 +808,7 @@ a {
 
 .blog_template_container { display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 250px 1fr 400px;
+  grid-template-rows: 250px 1fr 450px;
   gap: 5px 5px;
   grid-auto-flow: row;
   margin: 75px 250px 0px 250px;
