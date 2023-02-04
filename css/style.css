@@ -1129,16 +1129,15 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
 /* 404 error page CSS Grid and Flexbox*/
 
-.container_contact { display: grid;
+.container_404 { display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 250px;
+  grid-template-rows: 1fr;
   gap: 5px 5px;
   grid-auto-flow: row;
-  margin: 75px 250px 0px 250px;
+  margin: 75px 0px 0px 0px;
   grid-template-areas:
-    "header_404"
+    "header_404";
     /* border: red 4px solid; */
-  ;
 }
 
 /* 404 header */
@@ -1149,3 +1148,17 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 .header_404 h3 {font-size: 2em; color: rgb(255,89,37); margin-left: 25px; text-transform: uppercase;}
 
 .header_404 img {height: 300px; float: left; margin: 50px;}
+
+/* responsive below 500px */
+
+@media  and (max-width: 500px) {
+
+  .header_404 {grid-area: "header_404"; margin: 10px; display: flex; flex-direction:column; justify-content: center; align-items: center;}
+
+  .header_404 h2 {font-size: 4em; color: rebeccapurple; margin-left: 0px;}
+
+  .header_404 h3 {font-size: 2em; color: rgb(255,89,37); margin-left: 0px; text-transform: uppercase;}
+  
+  .header_404 img {height: 150px; float: left; margin: 50px;}
+
+}
