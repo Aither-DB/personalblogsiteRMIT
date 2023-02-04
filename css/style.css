@@ -914,6 +914,7 @@ a {
 
 }
 
+
 /* Contact page CSS Grid and Flexbox*/
 
 .container_contact { display: grid;
@@ -935,7 +936,7 @@ a {
 
 .contact_header h2 {font-size: 4em; color: rebeccapurple; margin-left: 0px;}
 
-.contact_header img {height: 150px; float: left; margin: 5px; border-radius: 10%;}
+.contact_header img {height: 150px; float: left; margin: 5px; border-radius: 0%;}
 
 /* Contact body */
 
@@ -977,10 +978,9 @@ a {
   
   .contact_header h2 {font-size: 3em; color: rebeccapurple; margin-left: 25px; line-height: 120%;}
 
-  .contact_header img {height: 100px; float: left; margin: 0px; border-radius: 50%;}
+  .contact_header img {height: 100px; float: left; margin: 0px; border-radius: 0%;}
 
   }
-
 /* Contact form - used tutorial from here to create but repurposed as per rubric https://www.majesticform.com/form-guides/html-email-form */
 
 #fcf-form {
