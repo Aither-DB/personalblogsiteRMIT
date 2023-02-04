@@ -1,0 +1,91 @@
+/* Custom site footer - used tutorial and customised as per rubric to make my own from here https://foolishdeveloper.com/simple-responsive-footer-design-using-html-and-css/*/
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: whitesmoke;
+    height: auto;
+    width: 100vw;
+    margin-top: 20px;
+    padding-top: 40px;
+    color: black;
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(255,89,37);
+  }
+  
+  .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 10px 0;
+  }
+  
+  .socials li{
+    margin: 0 10px;
+  }
+  
+  .socials a{
+    text-decoration: none;
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .socials a i{
+    font-size: 2em;
+    width: 20px;
+    transition: color .4s ease;
+  }
+  
+  .socials a:hover i{
+    color: gray;
+  }
+  
+  .footer-menu{
+    float: right;
+  }
+   
+  .footer-menu ul{
+    display: flex;
+    font-size: 16px;
+  }
+   
+  .footer-menu ul li{
+  padding-right: 10px;
+  display: block;
+  }
+   
+  .footer-menu ul li a{
+    color: gray;
+    text-decoration: none;
+  }
+   
+  .footer-menu ul li a:hover{
+    color: #27bcda;
+  }
+  
+  @media (max-width:500px) {
+    .footer-menu ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    }
